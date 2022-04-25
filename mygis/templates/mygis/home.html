@@ -1,18 +1,12 @@
-{% extends 'mygis/base.html' %}
+5{% extends 'mygis/base.html' %}
 
 {% block title %}
     Home
 {% endblock %}
 
 {% block content %}
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorum eos ex fuga nobis rerum saepe sapiente?
-        Accusamus aliquam dolor earum molestiae provident quam quas quis, reprehenderit sequi unde voluptatem!
-    </div>
-    <div>Aliquid, at corporis, cum dolore dolorem enim explicabo facilis harum illo itaque iure iusto modi neque odit
-        officiis perspiciatis quae quidem sit totam vitae. Ipsam, molestiae, nostrum. Eos, numquam odio.
-    </div>
-    <div>Adipisci aliquid animi aperiam aspernatur aut commodi, deleniti deserunt doloremque eligendi excepturi, hic id
-        ipsum itaque labore laudantium magni maxime pariatur perferendis quibusdam, quisquam tempora tenetur velit
-        veniam veritatis voluptas!
-    </div>
+    {% for article in articles %}
+        <h2> {{ article.title}}</h2>
+        <p>{{ article.text }}</p>
+    {% endfor %}
 {% endblock %}
