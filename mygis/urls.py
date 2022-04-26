@@ -21,6 +21,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^map/$', views.my_map, name='my_map'),
     url(r'^about/$', views.about, name='about'),
     url(r'^articles/(?P<article_id>[0-9]+)/$', views.show_articles, name='article'),
 ]
