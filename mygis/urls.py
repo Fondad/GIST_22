@@ -21,4 +21,5 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^articles/(?P<article_id>[0-9]+)/$', views.show_articles, name='article'),
 ]
