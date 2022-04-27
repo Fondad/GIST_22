@@ -22,7 +22,7 @@
     <script src="https://js.arcgis.com/4.23/"></script>
 
     <script>
-      require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
+      require(["esri/config","esri/Map", "esri/views/MapView", "esri/widgets/Locate"], function (esriConfig,Map, MapView, Locate) {
 
         esriConfig.apiKey = "YOUR_API_KEY";
 
@@ -36,6 +36,15 @@
           zoom: 13, // Zoom level
           container: "viewDiv" // Div element
         });
+        const locate = new Locate({
+          view: view,
+          useHeadingEnabled: false,
+          goToOverride: function(view, options) {
+            options.target.scale = 1500;
+            return view.goTo(options.target);
+          }
+        });
+        view.ui.add(locate, "top-left");
 
       });
     </script>
