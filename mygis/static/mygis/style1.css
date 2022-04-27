@@ -5,9 +5,9 @@ h2{
     color: cadetblue;
 }
 
-#footer-list{
-    color: lightgreen;
+.footer-list{
+    color: #196aa4;
 }
-#footer-list__item{
+.footer-list__item{
     font-style: italic;
 }
